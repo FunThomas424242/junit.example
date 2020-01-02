@@ -6,6 +6,7 @@ jdk:
 install: skip
 
 script:
+  - ./mvnw clean install -f junit5extension/pom.xml
   - ./mvnw clean install -f junit4/pom.xml
   - ./mvnw clean install -f junit4mix5/pom.xml
   - ./mvnw clean install -f junit5/pom.xml
