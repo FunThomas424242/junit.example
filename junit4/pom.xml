@@ -2,9 +2,9 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.example.junit.example</groupId>
-  <artifactId>junit.example</artifactId>
+  <artifactId>junit4.example</artifactId>
   <version>1.0.0-SNAPSHOT</version>
-	<name>JUnit Example</name>
+	<name>JUnit 4 Example</name>
 	<description>Einfache Beispiele für JUnit Tests</description>
 
 	<properties>
