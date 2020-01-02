@@ -1,3 +1,16 @@
-/target
-/.settings
-/.forge_settings
+# produced artifacts
+*.jar
+*.gz
+*.zip
+
+# maven
+target/
+
+# eclipse
+.settings
+.project
+
+# idea
+.idea/
+*.iml
+
