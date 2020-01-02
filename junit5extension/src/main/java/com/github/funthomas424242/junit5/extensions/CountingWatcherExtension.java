@@ -17,7 +17,7 @@ public class CountingWatcherExtension implements TestWatcher, AfterAllCallback {
 
     @Override
     public void afterAll(ExtensionContext extensionContext) throws Exception {
-        LOGGER.info(() -> "##### jetzt wars afterAll augerufen wurden");
+        LOGGER.info(() -> "##### jetzt wars afterAll augerufen wurden (also pro Testklasse)");
     }
 
     private enum TestResultStatus {
