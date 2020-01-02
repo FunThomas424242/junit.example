@@ -1,8 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.example.junit.example</groupId>
-    <artifactId>junit5.extension</artifactId>
+    <groupId>com.github.funthomas424242.junit5.extensions</groupId>
+    <artifactId>counting-extension</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <name>JUnit 5 Extension Example</name>
     <description>Einfache Beispiele für JUnit Tests</description>
@@ -12,6 +12,12 @@
     </properties>
 
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>2.0.0-alpha1</version>
+        </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
