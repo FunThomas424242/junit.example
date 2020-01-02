@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class CalculatorTest5 {
+public class Calculator5Test {
 
     private Calculator calculator;
 

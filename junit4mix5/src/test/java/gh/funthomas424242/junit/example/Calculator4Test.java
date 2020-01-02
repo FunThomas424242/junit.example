@@ -11,13 +11,13 @@ import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
 @RunWith(Parameterized.class)
-public class CalculatorTest4 {
+public class Calculator4Test {
 
 	private final Long wertA;
 	private final Long wertB;
 	private final Double result;
 
-	public CalculatorTest4(final Long wertA, final Long wertB,
+	public Calculator4Test(final Long wertA, final Long wertB,
 						   final Double result) {
 		this.wertA = wertA;
 		this.wertB = wertB;
