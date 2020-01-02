@@ -3,9 +3,8 @@ package com.github.funthomas424242.junit5.extensions;
 import org.junit.jupiter.api.extension.AfterAllCallback;
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.api.extension.TestWatcher;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
+import org.junit.platform.commons.logging.Logger;
+import org.junit.platform.commons.logging.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +17,7 @@ public class CountingWatcherExtension implements TestWatcher, AfterAllCallback {
 
     @Override
     public void afterAll(ExtensionContext extensionContext) throws Exception {
-        LOGGER.info("##### jetzt wars afterAll augerufen wurden");
+        LOGGER.info(() -> "##### jetzt wars afterAll augerufen wurden");
     }
 
     private enum TestResultStatus {
