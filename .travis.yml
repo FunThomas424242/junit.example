@@ -1,6 +1,7 @@
 language: java
 
 jdk:
-  - openjdk7
+  - openjdk8
   
-script: "mvn clean install"
+script:
+  - mvn clean install -f junit4/pom.xml"
