@@ -2,6 +2,8 @@ language: java
 
 jdk:
   - openjdk13
-  
+
+install: skip
+
 script:
   - ./mvnw clean install -f junit4/pom.xml
