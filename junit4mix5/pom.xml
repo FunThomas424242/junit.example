@@ -7,6 +7,8 @@
     <name>JUnit 4mix5 Example</name>
     <description>Einfache Beispiele für JUnit Tests</description>
 
+<!-- HINT:    https://stackoverflow.com/questions/47158583/executing-junit-4-and-junit-5-tests-in-a-same-build-->
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
