@@ -4,4 +4,4 @@ jdk:
   - openjdk8
   
 script:
-  - mvn clean install -f junit4/pom.xml"
+  - mvn clean install -f junit4/pom.xml
