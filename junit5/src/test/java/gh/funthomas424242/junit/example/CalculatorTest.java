@@ -28,7 +28,7 @@ public class CalculatorTest {
     @ParameterizedTest
     @MethodSource("getValidDoubleParameters")
     @DisplayName("wertC=add(wertA,wertB) //JUnit4 Test korrekt konvertiert und fixed")
-    public void add(final Double wertA, Double wertB, Double expected) {
+    public void addValidDoubleParameter(final Double wertA, Double wertB, Double expected) {
 
         final Double wertC = calculator.add(wertA, wertB);
         assertEquals(expected, wertC);
@@ -52,7 +52,7 @@ public class CalculatorTest {
     @ParameterizedTest
     @MethodSource("getValidLongParameter")
     @DisplayName("wertC=add(wertA,wertB) //JUnit4 Test 1:1 konvertiert")
-    public void addInvalid(final Long wertA, Long wertB, Double expected) {
+    public void addValidLongParameter(final Long wertA, Long wertB, Double expected) {
 
         final Double wertC = assertDoesNotThrow(() -> {
             return calculator.add(wertA.doubleValue(), wertB.doubleValue());
@@ -79,7 +79,7 @@ public class CalculatorTest {
     @ParameterizedTest
     @ArgumentsSource(CalculatorArgumentsProvider.class)
     @DisplayName("wertC=add(wertA,wertB) //per ArgumentsProvider Klasse")
-    public void addInvalid(final Double wertA, Double wertB, Double expected) {
+    public void addPerArgumentsProvider(final Double wertA, Double wertB, Double expected) {
 
         final Double wertC = assertDoesNotThrow(() -> calculator.add(wertA, wertB));
         assertEquals(expected, wertC);
