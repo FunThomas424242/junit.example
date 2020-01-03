@@ -57,7 +57,7 @@ public class CalculatorTest {
         final Double wertC = assertDoesNotThrow(() -> {
             return calculator.add(wertA.doubleValue(), wertB.doubleValue());
         });
-        assertEquals(expected,wertC);
+        assertEquals(expected, wertC);
     }
 
 
@@ -76,14 +76,12 @@ public class CalculatorTest {
     }
 
 
-//    @ParameterizedTest
-//    @ArgumentsSource(CalculatorArgumentsProvider.class)
-//    @DisplayName("wertC=add(wertA,wertB) //per ArgumentsProvider Klasse")
-//    public void addInvalid(final Double wertA, Double wertB, Double expected) {
-//
-//        assertDoesNotThrow(() -> {
-//            assertEquals(expected, calculator.add(wertA, wertB));
-//        });
-//
-//    }
+    @ParameterizedTest
+    @ArgumentsSource(CalculatorArgumentsProvider.class)
+    @DisplayName("wertC=add(wertA,wertB) //per ArgumentsProvider Klasse")
+    public void addInvalid(final Double wertA, Double wertB, Double expected) {
+
+        final Double wertC = assertDoesNotThrow(() -> calculator.add(wertA, wertB));
+        assertEquals(expected, wertC);
+    }
 }
