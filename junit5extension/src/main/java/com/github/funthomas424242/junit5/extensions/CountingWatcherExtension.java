@@ -106,7 +106,7 @@ public class CountingWatcherExtension implements TestWatcher, TestInstancePostPr
 
     @Override
     public void afterAll(ExtensionContext extensionContext) throws Exception {
-        LOGGER.info(() -> String.format("### aktueller Zählerstand: %s" + getCounter(extensionContext)));
+        LOGGER.info(() -> String.format("### aktueller Zählerstand: %s", getCounter(extensionContext)));
     }
 
     @Override

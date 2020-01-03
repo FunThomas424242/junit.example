@@ -6,6 +6,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.ArgumentsSource;
 import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
@@ -53,10 +54,10 @@ public class CalculatorTest {
     @DisplayName("wertC=add(wertA,wertB) //JUnit4 Test 1:1 konvertiert")
     public void addInvalid(final Long wertA, Long wertB, Double expected) {
 
-        assertDoesNotThrow(() -> {
-            calculator.add(wertA.doubleValue(), wertB.doubleValue());
+        final Double wertC = assertDoesNotThrow(() -> {
+            return calculator.add(wertA.doubleValue(), wertB.doubleValue());
         });
-
+        assertEquals(expected, wertC);
     }
 
 
@@ -72,5 +73,15 @@ public class CalculatorTest {
                 //		parameters.add(new Object[] { 2L, 2L, 4.0 });
                 //		parameters.add(new Object[] { 4L, 0L, 4.0 });
         );
+    }
+
+
+    @ParameterizedTest
+    @ArgumentsSource(CalculatorArgumentsProvider.class)
+    @DisplayName("wertC=add(wertA,wertB) //per ArgumentsProvider Klasse")
+    public void addInvalid(final Double wertA, Double wertB, Double expected) {
+
+        final Double wertC = assertDoesNotThrow(() -> calculator.add(wertA, wertB));
+        assertEquals(expected, wertC);
     }
 }
