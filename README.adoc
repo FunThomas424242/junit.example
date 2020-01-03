@@ -1,0 +1,26 @@
+= junit.example
+
+Beispiele für JUnit Tests
+
+* Parameterisierter Unit Test
+
+Letzter Build Status: image:https://travis-ci.org/FunThomas424242/junit.example.png?branch=master[Build Status,link=https://travis-ci.org/FunThomas424242/junit.example]
+
+= Lessons Learned
+
+== JUnit 5
+
+* JUnit 5 verwaltet intern einen Testbaum. Die Knoten sind die einzelnen Testklassen und Paramerterisierten Tests,
+die Blätter sind die einzelnen Testmethoden welche mit @Test annotiert sind.
+* Jeder Node stellt einen TestContainer dar.
+* Jeder Node erzeugt einen eigenen Extension Kontext in dem wiederum ein eigener Speicher (Store) angelegt wird.
+* Ein Store ist eine HashMap.
+* Die Nodes sind über Parent Referenzen erreichbar.
+* Stores in anderen Nodes, als dem vom aktuellen Testfall, sind ohne Zugriffsbeschränkung les- und schreibbar.
+* TestWatcher ist ein Interface welches nachträglich bereitgestellt wurde und Hooks zum Testergebnis berstellt: testFailed, testSuccess…
+* Das AfterAll läuft zwar am Ende eines TestContainers (Testklasse, ParamterizedTests, …)
+kennt aber noch nicht immer den aktuellen Zustand aller Tests (also ob erfolgreich oder failed).
+* Eine Zusammenfassung lässt sich somit nur sicher ausgeben über:
+** ein extra aufzurufendes Callback der Extension (schwierig)
+** in den TestWatcher Callbacks (der beste Weg). Man kann ja auch senden an andere Klassen, Reports, andere Server :)
+** im Shutdown Hook der JVM (nicht sinnvoll)
