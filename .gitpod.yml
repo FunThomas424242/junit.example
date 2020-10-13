@@ -1,3 +1,6 @@
 tasks:
   - init: mvn clean install
-    command: './mvnw clean install'
+    command: './mvnw clean install -f junit5extension/pom.xml'
+    command: './mvnw clean install -f junit4/pom.xml'
+    command: './mvnw clean install -f junit4mix5/pom.xml'
+    command: './mvnw clean install -f junit5/pom.xml'
