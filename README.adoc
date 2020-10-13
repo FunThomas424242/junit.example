@@ -4,7 +4,7 @@ Beispiele für JUnit Tests
 
 * Parameterisierter Unit Test
 
-Letzter Build Status: image:https://travis-ci.org/FunThomas424242/junit.example.png?branch=master[Build Status,link=https://travis-ci.org/FunThomas424242/junit.example]
+Letzter Build Status: image:https://travis-ci.org/Huluvu424242/junit.example.png?branch=master[Build Status,link=https://travis-ci.org/Huluvu424242/junit.example]
 
 = Lessons Learned
 
